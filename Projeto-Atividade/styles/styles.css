@@ -1,0 +1,52 @@
+/* Centraliza tudo na tela */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #ffffff;
+    color: #000000;
+    
+    /* A MÁGICA ACONTECE AQUI: 
+       Demora 1.5 segundos (1.5s) para completar a transição de cor! */
+    transition: background-color 1.5s ease-in-out, color 1.5s ease-in-out;
+}
+
+/* Tamanho do relógio */
+#relogio {
+    font-size: 60px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Visual do botão */
+#botao-tema {
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 2px solid #333;
+    border-radius: 8px;
+    background-color: #eeeeee;
+    /* O botão também acompanha o ritmo suave */
+    transition: background-color 1.5s ease-in-out, color 1.5s ease-in-out, transform 0.2s ease;
+}
+
+/* Efeito ao clicar no botão: dá uma leve retraída */
+#botao-tema:active {
+    transform: scale(0.95);
+}
+
+/* MODO ESCURO (Com a transição super demorada e elegante) */
+body.escuro {
+    background-color: #121212 !important;
+    color: #ffffff !important;
+}
+
+body.escuro #botao-tema {
+    background-color: #333333;
+    color: #ffffff;
+    border-color: #ffffff;
+}
