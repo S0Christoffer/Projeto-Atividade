@@ -10,7 +10,7 @@ body {
     background-color: #ffffff;
     color: #000000;
     
-    /* A MÁGICA ACONTECE AQUI: 
+    /*
        Demora 1.5 segundos (1.5s) para completar a transição de cor! */
     transition: background-color 1.5s ease-in-out, color 1.5s ease-in-out;
 }
